@@ -4,26 +4,39 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  
-  var name = 'default';
-  function handleClick(){
-    console.log(name);
-  }
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [result, setResult] = useState(null);
 
   function handleChange(e){
-    name= e.target.value;
+    let kq;
+    if(e==="+"){
+      kq=num1+num2;
+    }
+    
+
   }
 
   return (
     <>
-      <input id="a" type="text" />
+    <div className='caculator'>
+    <input id="a" type="text" placeholder='Nhập số thứ nhất'/>
       <br />
-      <input id="b" type="text" />
+      <input id="b" type="text" placeholder='Nhập số thứ hai'/>
+      
+    </div>
+    <div>
+    <br />
+      <button onClick={handleClick}>+</button>
+      
+      <button onClick={handleClick}>-</button>
       <br />
-      <button onClick={handleClick}>Click</button>
+      <button onClick={handleClick}>*</button>
+      
+      <button onClick={handleClick}>/</button>
       <br />
-      <span>aaa</span>
+    </div>
+
     </>
   )
 }
