@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        header{
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 20px;
+            justify-content: space-around;
+        }
+        .logo-search{
+            display: flex;
+            padding: 10px;
+            align-items:center;
+            
+        }
+        .logo-search >img{
+            padding: 10px;
+        }
+        .input-search{
+            display: flex;
+            padding: 10px;
+            align-items:center;
+            background-color: #dfdfdf;
+            border-radius: 10px;
+        }
+        .input-search >input{
+            border: none;
+            background-color: #dfdfdf;
+            
+        }
+        .links{
+            display: flex;
+            padding: 10px;
+            align-items:center;
+        }
+        .links >a{
+            color: #888888;
+            text-decoration-line: none;
+            padding: 10px;
+        }
+        .button-user{
+            display: flex;
+            padding: 5px;
+            align-items:center;
+            border-radius: 10px;
+        }
+        .button-user{
+            background-color: #eed2e5;
+        }
+        .button-user >img{
+            padding-right: 10px;
+        }
+        .infor{
+            display: flex;
+            align-items:center;
+            color: #973b7c;
+            text-shadow: bo;
+        }
+        .infor > img{
+            padding: 10px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+        .left{
+            border: 1px;
+        }
+        .content-center{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .list-button{
+            display: flex;
+            justify-content: center;
+        }
+        .list-button >a{
+            text-decoration-line: none;
+            padding: 10px;
+            margin: 10px;
+        }
+        .list-type{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+        }
+        .list-type >div{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-search">
+            <img src="../img/chefify.png" alt="">
+            <div class="input-search">
+                <i class="bi bi-search"></i>
+                <input type="text" name="" id="" placeholder="cakescascsa">
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="#">What to cook</a>
+            <a href="#">Recipes</a>
+            <a href="#">Ingredients</a>
+            <a href="#">Occasions</a>
+            <a href="#">About Us</a>
+        </div>
+        <div class="infor">
+            <div class="button-user">
+                <img src="../img/check.png" alt="">
+                You Recipe Box 
+            </div>
+            <img src="../img/avatar.png" alt="">
+        </div> 
+        
+    </header>
+    <div class="container">
+            <div class="left">
+                <h2>
+                    <img src="../img/list_filter.png" alt="">
+                    FILTERS
+                </h2>
+                <div class="cus-type">
+                    <h4>Type</h4>
+                    <div class="list-type">
+                        <div class="item-type">
+                            <input type="checkbox" name="" id="">
+                            <p>Pan-fried</p>
+                        </div>
+                        <div>2</div>
+                        <div>3</div>  
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>  
+                        <div>7</div>
+                        <div>8</div>
+                    </div>
+                </div>
+                <div class="cus-time">
+                    <h4>Time</h4>
+                </div>
+                <div class="cus-rating">
+                    <h4>Rating</h4>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <img src="../img/rating_5.png" alt="">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <img src="../img/rating_4.png" alt="">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <img src="../img/rating_3.png" alt="">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <img src="../img/rating_2.png" alt="">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <img src="../img/rating_1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content-center">
+                <h3><b>
+                    Sorry, no results were found for "cakescascsa"
+                </b></h3>
+                <img src="../img/nothing.png" alt="">
+                <p>
+                    We have all your independence Day sweets covered
+                <p>
+                <div class="list-button">
+                    <a style="background-color: #ffeff5; border-radius: 10px; color: #ed86a9;">Sweet Cake</a>
+                    <a style="background-color: #f4f0fe; border-radius: 10px; color: #ad9bd2;">Black Cake</button>
+                    <a style="background-color: #fbedf3; border-radius: 10px; color: #ca7d9f;">Pozole Verde</a>
+                    <a style="background-color: #eefcfe; border-radius: 10px; color: #699fac;">Healthy food</a>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
