@@ -69,7 +69,11 @@
             justify-content: space-around;
         }
         .left{
-            border: 1px;
+            border: solid 1px #888888;
+        }
+        .left >div{
+            border-bottom: solid 1px #888888;
+            padding: 10px;
         }
         .content-center{
             display: flex;
@@ -87,7 +91,7 @@
         }
         .list-type{
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto;
             padding: 10px;
         }
         .list-type >div{
@@ -124,31 +128,55 @@
     </header>
     <div class="container">
             <div class="left">
-                <h2>
-                    <img src="../img/list_filter.png" alt="">
-                    FILTERS
-                </h2>
+                <div>
+                    <h2>
+                        <img src="../img/list_filter.png" alt="">
+                        FILTERS
+                    </h2>
+                </div>
                 <div class="cus-type">
-                    <h4>Type</h4>
+                    <h3>Type</h3>
                     <div class="list-type">
                         <div class="item-type">
                             <input type="checkbox" name="" id="">
                             <p>Pan-fried</p>
                         </div>
-                        <div>2</div>
-                        <div>3</div>  
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>  
-                        <div>7</div>
-                        <div>8</div>
+                        <div class="item-type">
+                            <input type="checkbox" name="" id="">
+                            <p>Grilled</p>
+                        </div>
+                        <div class="item-type">
+                            <input type="checkbox" name="" id="">
+                            <p>Sauteed</p>
+                        </div>
+                        <div class="item-type">
+                            <input type="checkbox" name="" id="">
+                            <p>Steamed</p>
+                        </div>
+                        <div class="item-type">
+                            <input type="checkbox" name="" id="">
+                            <p>Stir-fried</p>
+                        </div>
+                        <div class="item-type">
+                            <input type="checkbox" name="" id="">
+                            <p>Roasted</p>
+                        </div>
+                        <div class="item-type">
+                            <input type="checkbox" name="" id="">
+                            <p>Baked</p>
+                        </div>
+                        <div class="item-type">
+                            <input type="checkbox" name="" id="">
+                            <p>Stewed</p>
+                        </div>
                     </div>
                 </div>
                 <div class="cus-time">
-                    <h4>Time</h4>
+                    <h3>Time</h3>
+                    <img src="../img/slider.png" alt="">
                 </div>
                 <div class="cus-rating">
-                    <h4>Rating</h4>
+                    <h3>Rating</h3>
                     <div>
                         <input type="checkbox" name="" id="">
                         <img src="../img/rating_5.png" alt="">
