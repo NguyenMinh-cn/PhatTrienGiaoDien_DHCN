@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.boder{
+    background-color: aliceblue;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: 10px;
+    height: 180px;
+    width: 150px;
+}
+img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+/* .title-infor >image{
+    height: 50px;
+    width: 50px;
+} */
+.title-infor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 10px;
+}
