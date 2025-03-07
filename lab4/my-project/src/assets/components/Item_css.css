@@ -2,15 +2,14 @@
     margin: 0;
     padding: 0;
 }
-.boder{
+.boder {
     background-color: aliceblue;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     margin: 10px;
-    height: 180px;
     width: 150px;
 }
-img{
+img {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -18,8 +17,9 @@ img{
     height: 50px;
     width: 50px;
 } */
-.title-infor{
+.title-infor {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     color: black;

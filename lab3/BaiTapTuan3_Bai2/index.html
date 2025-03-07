@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Investment Calculator</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            .container {
+                margin: auto;
+                padding: 20px;
+            }
+
+            input {
+                width: 300px;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 5px;
+            }
+            button {
+                padding: 10px 20px;
+                border: none;
+                background: #000000;
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            table {
+                width: 100%;
+                margin-top: 20px;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                padding: 10px;
+                border: 1px solid rgb(0, 0, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                Input Your Invest Money
+                <input type="text" id="money" placeholder="Enter amount" />
+            </div>
+
+            <div>
+                Input Rate
+                <input type="text" id="rate" placeholder="Enter rate (%)" />
+            </div>
+
+            <div>
+                Input your Goal
+                <input type="text" id="goal" placeholder="Enter goal amount" />
+            </div>
+
+            <button onclick="addRow()">Click</button>
+
+            <table>
+                <tr>
+                    <th>Year</th>
+                    <th>Money</th>
+                    <th>Rate</th>
+                    <th>End Year</th>
+                </tr>
+                <tbody id="result"></tbody>
+            </table>
+        </div>
+
+        <script>
+            let year = 0;
+            function addRow() {
+                let money = parseFloat(document.getElementById('money').value);
+                let rate = parseFloat(document.getElementById('rate').value);
+                let goal = parseFloat(document.getElementById('goal').value);
+
+                if (isNaN(money) || isNaN(rate) || isNaN(goal)) {
+                    alert('Vui lòng nhập số hợp lệ!');
+                    return;
+                }
+
+                let endYearMoney = money + (money * rate) / 100;
+                let table = document.getElementById('result');
+                let row = `<tr>
+                        <td>${year}</td>
+                        <td>${money.toFixed(2)}</td>
+                        <td>${rate}%</td>
+                        <td>${endYearMoney.toFixed(2)}</td>
+                        </tr>`;
+                table.innerHTML += row;
+
+                year++;
+            }
+        </script>
+    </body>
+</html>
