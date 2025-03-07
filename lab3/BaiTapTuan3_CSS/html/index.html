@@ -5,100 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        header{
-            display: flex;
-            flex-wrap: nowrap;
-            margin: 20px;
-            justify-content: space-around;
-        }
-        .logo-search{
-            display: flex;
-            padding: 10px;
-            align-items:center;
-            
-        }
-        .logo-search >img{
-            padding: 10px;
-        }
-        .input-search{
-            display: flex;
-            padding: 10px;
-            align-items:center;
-            background-color: #dfdfdf;
-            border-radius: 10px;
-        }
-        .input-search >input{
-            border: none;
-            background-color: #dfdfdf;
-            
-        }
-        .links{
-            display: flex;
-            padding: 10px;
-            align-items:center;
-        }
-        .links >a{
-            color: #888888;
-            text-decoration-line: none;
-            padding: 10px;
-        }
-        .button-user{
-            display: flex;
-            padding: 5px;
-            align-items:center;
-            border-radius: 10px;
-        }
-        .button-user{
-            background-color: #eed2e5;
-        }
-        .button-user >img{
-            padding-right: 10px;
-        }
-        .infor{
-            display: flex;
-            align-items:center;
-            color: #973b7c;
-            text-shadow: bo;
-        }
-        .infor > img{
-            padding: 10px;
-        }
-        .container{
-            display: flex;
-            justify-content: space-around;
-        }
-        .left{
-            border: solid 1px #888888;
-        }
-        .left >div{
-            border-bottom: solid 1px #888888;
-            padding: 10px;
-        }
-        .content-center{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .list-button{
-            display: flex;
-            justify-content: center;
-        }
-        .list-button >a{
-            text-decoration-line: none;
-            padding: 10px;
-            margin: 10px;
-        }
-        .list-type{
-            display: grid;
-            grid-template-columns: auto auto;
-            padding: 10px;
-        }
-        .list-type >div{
-            display: flex;
-            justify-content: center;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oak+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -134,68 +43,69 @@
                         FILTERS
                     </h2>
                 </div>
-                <div class="cus-type">
-                    <h3>Type</h3>
-                    <div class="list-type">
-                        <div class="item-type">
-                            <input type="checkbox" name="" id="">
-                            <p>Pan-fried</p>
-                        </div>
-                        <div class="item-type">
-                            <input type="checkbox" name="" id="">
-                            <p>Grilled</p>
-                        </div>
-                        <div class="item-type">
-                            <input type="checkbox" name="" id="">
-                            <p>Sauteed</p>
-                        </div>
-                        <div class="item-type">
-                            <input type="checkbox" name="" id="">
-                            <p>Steamed</p>
-                        </div>
-                        <div class="item-type">
-                            <input type="checkbox" name="" id="">
-                            <p>Stir-fried</p>
-                        </div>
-                        <div class="item-type">
-                            <input type="checkbox" name="" id="">
-                            <p>Roasted</p>
-                        </div>
-                        <div class="item-type">
-                            <input type="checkbox" name="" id="">
-                            <p>Baked</p>
-                        </div>
-                        <div class="item-type">
-                            <input type="checkbox" name="" id="">
-                            <p>Stewed</p>
-                        </div>
+                <div class="submenu">
+                    <div class="submenu-header">
+                        <h3>Type</h3>
+                        <i class="bi bi-chevron-down"></i> 
+                    </div>
+                    <div class="submenu-content" id="typeMenu">
+                            <label><input type="checkbox" name="" id=""> Pan-fried</label>
+                            <label><input type="checkbox" name="" id=""> Grilled</label>
+                            <label><input type="checkbox" name="" id=""> Sauteed</label>
+                            <label><input type="checkbox" name="" id=""> Steamed</label>
+                            <label><input type="checkbox" name="" id=""> Stir-fried</label>
+                            <label><input type="checkbox" name="" id=""> Roasted</label>
+                            <label><input type="checkbox" name="" id=""> Baked</label>
+                            <label><input type="checkbox" name="" id=""> Stewed</label>
                     </div>
                 </div>
-                <div class="cus-time">
-                    <h3>Time</h3>
-                    <img src="../img/slider.png" alt="">
+                <div class="submenu">
+                    <div class="submenu-header">
+                        <h3>Time</h3>
+                        <i class="bi bi-chevron-down"></i> 
+                    </div>
+                    <div class="submenu-content" id="timeMenu">
+                        <img src="../img/slider.png" alt=""> 
+                    </div>
                 </div>
-                <div class="cus-rating">
-                    <h3>Rating</h3>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <img src="../img/rating_5.png" alt="">
+                <div class="submenu">
+                    <div class="submenu-header">
+                        <h3>Rating</h3>
+                        <i class="bi bi-chevron-down"></i> 
                     </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <img src="../img/rating_4.png" alt="">
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <img src="../img/rating_3.png" alt="">
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <img src="../img/rating_2.png" alt="">
-                    </div>
-                    <div>
-                        <input type="checkbox" name="" id="">
-                        <img src="../img/rating_1.png" alt="">
+                    <div class="submenu-content" id="ratingMenu">
+                        <div>
+                            <label>
+                                <input type="checkbox" name="" id="">
+                                <img src="../img/rating_5.png" alt="">
+                            </label>
+                            
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="" id="">
+                                <img src="../img/rating_4.png" alt="">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="" id="">
+                                <img src="../img/rating_3.png" alt="">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="" id="">
+                                <img src="../img/rating_2.png" alt="">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" name="" id="">
+                                <img src="../img/rating_1.png" alt="">
+                            </label>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

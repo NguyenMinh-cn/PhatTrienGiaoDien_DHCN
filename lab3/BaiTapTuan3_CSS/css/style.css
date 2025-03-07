@@ -1,0 +1,119 @@
+* {
+    font-family: 'Oak Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px;
+    justify-content: space-around;
+}
+.logo-search {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.logo-search > img {
+    padding: 10px;
+}
+.input-search {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+}
+.input-search > input {
+    border: none;
+    background-color: #f3f4f6;
+}
+.links {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.links > a {
+    color: #bbbdc1;
+    text-decoration-line: none;
+    padding: 10px;
+}
+.button-user {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    border-radius: 10px;
+}
+.button-user {
+    background-color: #feeff5;
+}
+.button-user > img {
+    padding-right: 10px;
+}
+.infor {
+    display: flex;
+    align-items: center;
+    color: #df95b2;
+    text-shadow: bo;
+}
+.infor > img {
+    padding: 10px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+.left {
+    border: solid 1px #888888;
+}
+.left > div {
+    border-bottom: solid 1px #888888;
+    padding: 10px;
+}
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-button {
+    display: flex;
+    justify-content: center;
+}
+.list-button > a {
+    text-decoration-line: none;
+    padding: 10px;
+    margin: 10px;
+}
+.list-type {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+.list-type > div {
+    display: flex;
+    justify-content: center;
+}
+input[type='checkbox'] {
+    transform: scale(1.5);
+}
+input[type='checkbox']:checked {
+    accent-color: #e94e82;
+}
+.submenu {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.submenu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.submenu-header i {
+    color: #e94e82;
+    font-size: 30px;
+    text-shadow: 1px 1px 0px #e94e82, -1px -1px 0px #e94e82,
+        -1px 1px 0px #e94e82, 1px -1px 0px #e94e82;
+    transform: rotate(180deg);
+}

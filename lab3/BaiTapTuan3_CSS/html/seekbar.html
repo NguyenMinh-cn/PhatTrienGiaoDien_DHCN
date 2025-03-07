@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Double Range Slider</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+            }
+            .slider-container {
+                width: 80%;
+                margin: auto;
+                position: relative;
+            }
+            .slider {
+                width: 100%;
+                height: 8px;
+                background: #ddd;
+                border-radius: 5px;
+                position: relative;
+            }
+            .progress {
+                position: absolute;
+                height: 100%;
+                background: red;
+                border-radius: 5px;
+            }
+            .thumb {
+                width: 16px;
+                height: 16px;
+                background: red;
+                border-radius: 50%;
+                position: absolute;
+                top: -4px;
+                transform: translateX(-50%);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Thanh Trượt Hai Đầu</h2>
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="progress" id="progress"></div>
+                <div class="thumb" id="thumbLeft"></div>
+                <div class="thumb" id="thumbRight"></div>
+            </div>
+        </div>
+
+        <script>
+            const slider = document.getElementById('slider');
+            const progress = document.getElementById('progress');
+            const thumbLeft = document.getElementById('thumbLeft');
+            const thumbRight = document.getElementById('thumbRight');
+
+            let min = 0,
+                max = 100;
+            let leftValue = 20,
+                rightValue = 80;
+            let activeThumb = null;
+
+            function updateSlider() {
+                let leftPercent = (leftValue / max) * 100;
+                let rightPercent = (rightValue / max) * 100;
+
+                thumbLeft.style.left = leftPercent + '%';
+                thumbRight.style.left = rightPercent + '%';
+                progress.style.left = leftPercent + '%';
+                progress.style.width = rightPercent - leftPercent + '%';
+            }
+
+            function onMouseMove(e) {
+                if (!activeThumb) return;
+
+                let rect = slider.getBoundingClientRect();
+                let offsetX = ((e.clientX - rect.left) / rect.width) * max;
+
+                if (activeThumb === thumbLeft) {
+                    leftValue = Math.min(
+                        Math.max(min, offsetX),
+                        rightValue - 5
+                    );
+                } else if (activeThumb === thumbRight) {
+                    rightValue = Math.max(
+                        Math.min(max, offsetX),
+                        leftValue + 5
+                    );
+                }
+
+                updateSlider();
+            }
+
+            function onMouseUp() {
+                activeThumb = null;
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+
+            thumbLeft.addEventListener('mousedown', () => {
+                activeThumb = thumbLeft;
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
+
+            thumbRight.addEventListener('mousedown', () => {
+                activeThumb = thumbRight;
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
+
+            updateSlider();
+        </script>
+    </body>
+</html>
