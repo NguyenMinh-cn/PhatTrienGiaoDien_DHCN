@@ -13,10 +13,6 @@ const calReducuer = (state, action) => {
             return { total: action.payload.num1 * action.payload.num2 }
         case '/':
             return { total: action.payload.num2 == 0 ? 'Không thể chia cho 0' : action.payload.num1 / action.payload.num2 }
-        case 'AC':
-            return { initialState }
-        default:
-            throw new Error("Không tìm thấy action")
     }
 }
 
@@ -25,12 +21,6 @@ export default function CalculatorWithReducer() {
     const [state, dispatch] = useReducer(calReducuer, initialState)
     const [num1, setNum1] = useState(0)
     const [num2, setNum2] = useState(0)
-
-    const handleClear = () => {
-        setNum1(0)
-        setNum2(0)
-        dispatch({ type: 'AC' })
-    }
 
     return (
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
@@ -42,7 +32,6 @@ export default function CalculatorWithReducer() {
             <button onClick={() => dispatch({ type: '-', payload: { num1, num2 } })}>-</button>
             <button onClick={() => dispatch({ type: '*', payload: { num1, num2 } })}>*</button>
             <button onClick={() => dispatch({ type: '/', payload: { num1, num2 } })}>/</button>
-            <button onClick={handleClear}>AC</button>
 
             <h2>Kết quả của phép tính: {state.total}</h2>
         </div>
