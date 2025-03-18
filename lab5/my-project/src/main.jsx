@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
 import App_useState from './App_useState.jsx';
+import App_useReducer from './App_useReducer.jsx';
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <App_useState />
+        <App_useReducer />
     </StrictMode>
 );
