@@ -1,0 +1,36 @@
+.body{
+    height: 100%;
+    width: 100%;
+}
+.footer{
+    height: 100px;
+    width: 100%;
+    background-color: blanchedalmond;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div >a{
+    text-decoration: none;
+    color: #000;
+    margin-right: 12px;
+}
+
+.header {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: coral;
+    padding: 10px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkseagreen;
+    color: rgb(13, 11, 24);
+    padding: 10px;
+}
