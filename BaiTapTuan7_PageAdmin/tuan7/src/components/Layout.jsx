@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 import GroupImage from '../assets/img/Group.png';
 import Bell1 from '../assets/img/Bell 1.png';
 import Button1509 from '../assets/img/Button 1509.png';
@@ -18,6 +21,37 @@ import Search from '../assets/img/Search.png';
 import Squares from '../assets/img/Squares four 1.png';
 import Avatar1 from '../assets/img/Avatar (1).png';
 function Layout() {
+    const [data, setData] = useState({
+        turnover: null,
+        profit: null,
+        newCustomer: null
+    });
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    useEffect(() => {
+
+        const fetchData = async () => {
+            try {
+                const [turnoverRes, profitRes, newCustomerRes] = await Promise.all([
+                    axios.get('http://localhost:5000/Turnover'),
+                    axios.get('http://localhost:5000/Profit'),
+                    axios.get('http://localhost:5000/New_customer')
+                ]);
+
+                setData({
+                    turnover: turnoverRes.data[0] || null,  
+                    profit: profitRes.data[0] || null,     
+                    newCustomer: newCustomerRes.data[0] || null  
+                });
+                setLoading(false);
+            } catch (err) {
+                setError(err.message);
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
     return (
         <div className="grid grid-cols-4 gap-4 p-4 h-screen ">
             {/* Menu (1 cột) */}
@@ -93,13 +127,34 @@ function Layout() {
                         <span>Overview</span>
                     </div>
                     <div className=" col-span-1 row-span-2 bg-slate-400">
-                        cột 1 2 dòng
+                    {data.turnover ? (
+                            <>
+                                <h3>{data.turnover.title}</h3>
+                                <p>{data.turnover.data}</p>
+                            </>
+                        ) : (
+                            <div>No data available</div>
+                        )}
                     </div>
                     <div className=" col-span-1 row-span-2 bg-slate-400">
-                        cột 2 2 dòng
+                    {data.profit ? (
+                            <>
+                                <h3>{data.profit.title}</h3>
+                                <p>{data.profit.data}</p>
+                            </>
+                        ) : (
+                            <div>No data available</div>
+                        )}
                     </div>
                     <div className=" col-span-1 row-span-2 bg-slate-400">
-                        cột 3 2 dòng
+                    {data.newCustomer ? (
+                            <>
+                                <h3>{data.newCustomer.title}</h3>
+                                <p>{data.newCustomer.data}</p>
+                            </>
+                        ) : (
+                            <div>No data available</div>
+                        )}
                     </div>
                 </div>
                 <div className="col-span-3 row-span-6 border-b p-4">
