@@ -7,7 +7,7 @@ import Button1509 from '../assets/img/Button 1509.png';
 import Button1529 from '../assets/img/Button 1529.png';
 import Button1530 from '../assets/img/Button 1530.png';
 import Code from '../assets/img/Code.png';
-import Create from '../assets/img/create.png';
+
 import Chat from '../assets/img/Chat.png';
 import ExportIcon from '../assets/img/Download.png';
 import File_text_1 from '../assets/img/File text 1.png';
