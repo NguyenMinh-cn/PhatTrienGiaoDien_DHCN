@@ -1,3 +1,4 @@
+import DataTableCustom from './components/DataTableCustom';
 import Layout from './components/Layout';
 
 function App() {

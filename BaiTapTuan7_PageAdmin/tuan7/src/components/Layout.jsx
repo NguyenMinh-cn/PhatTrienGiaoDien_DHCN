@@ -9,17 +9,18 @@ import Button1530 from '../assets/img/Button 1530.png';
 import Code from '../assets/img/Code.png';
 import Create from '../assets/img/create.png';
 import Chat from '../assets/img/Chat.png';
-import Download from '../assets/img/Download.png';
+import ExportIcon from '../assets/img/Download.png';
 import File_text_1 from '../assets/img/File text 1.png';
 import Folder from '../assets/img/Folder.png';
 import Groups from '../assets/img/Groups.png';
 import Logo from '../assets/img/Image 1858.png';
 import Pie_chart from '../assets/img/Pie chart.png';
-import Move_up from '../assets/img/Move up.png';
+import ImportIcon from '../assets/img/Move up.png';
 import Question_1 from '../assets/img/Question 1.png';
 import Search from '../assets/img/Search.png';
 import Squares from '../assets/img/Squares four 1.png';
 import Avatar1 from '../assets/img/Avatar (1).png';
+import DataTableCustom from './DataTableCustom';
 function Layout() {
     const [data, setData] = useState({
         turnover: null,
@@ -192,51 +193,31 @@ function Layout() {
                 <div className="col-span-3 row-span-6 border-b p-4">
                     <div
                         href="#"
-                        className=" col-span-3 flex items-center py-2 font-bold">
-                        <img
-                            src={File_text_1}
-                            alt="Group"
-                            className="max-w-20 mr-2"
-                        />
-                        <span>Detailed report</span>
+                        className=" col-span-3 flex items-center justify-between py-2 font-bold">
+                        <div className="flex items-center">
+                            <img
+                                src={File_text_1}
+                                alt="Group"
+                                className="max-w-20 mr-2"
+                            />
+                            <span>Detailed report</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <button className="flex items-center px-2 py-2 border border-pink-500 rounded-lg hover:bg-pink-300 hover:text-white transition-colors">
+                                <img src={ImportIcon} alt="" className="pr-2" />
+                                <span className="text-pink-500 text-sm font-normal ">
+                                    Import
+                                </span>
+                            </button>
+                            <button className=" flex items-center px-2 py-2 border border-pink-500 rounded-lg hover:bg-pink-300 hover:text-white transition-colors">
+                                <img src={ExportIcon} alt="" className="pr-2" />
+                                <span className="text-pink-500 text-sm font-normal ">
+                                    Export
+                                </span>
+                            </button>
+                        </div>
                     </div>
-                    <table className="w-full border-collapse ">
-                        <thead>
-                            <tr>
-                                <th className="border  px-4 py-2">
-                                    <input type="checkbox" />
-                                </th>
-                                <th className="border">CUSTOMER NAME</th>
-                                <th className="border">COMPANY</th>
-                                <th className="border">ORDER VALUE</th>
-                                <th className="border">ORDER DATE</th>
-                                <th className="border">STATUS</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            {[...Array(6)].map((_, index) => (
-                                <tr key={index}>
-                                    <td className="border px-4 py-2 text-center">
-                                        <input type="checkbox" />
-                                    </td>
-                                    <td className="border px-4 py-2">
-                                        John Doe
-                                    </td>
-                                    <td className="border px-4 py-2">
-                                        ABC Corp
-                                    </td>
-                                    <td className="border px-4 py-2">$1000</td>
-                                    <td className="border px-4 py-2">
-                                        2024-04-04
-                                    </td>
-                                    <td className="border px-4 py-2 text-green-500">
-                                        Completed
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    <DataTableCustom />
                 </div>
             </div>
         </div>
