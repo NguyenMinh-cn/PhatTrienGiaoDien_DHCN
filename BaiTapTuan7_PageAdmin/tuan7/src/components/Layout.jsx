@@ -21,6 +21,7 @@ import Search from '../assets/img/Search.png';
 import Squares from '../assets/img/Squares four 1.png';
 import Avatar1 from '../assets/img/Avatar (1).png';
 import DataTableCustom from './DataTableCustom';
+import { Link } from 'react-router-dom';
 function Layout() {
     const [data, setData] = useState({
         turnover: null,
@@ -38,9 +39,7 @@ function Layout() {
                         axios.get('http://localhost:5000/Profit'),
                         axios.get('http://localhost:5000/New_customer'),
                     ]);
-                console.log('Turnover data:', turnoverRes.data);
-                console.log('Profit data:', profitRes.data);
-                console.log('New customer data:', newCustomerRes.data);
+
                 setData({
                     turnover: turnoverRes.data[0] || null,
                     profit: profitRes.data[0] || null,
@@ -62,34 +61,44 @@ function Layout() {
             <div className="col-span-1 p-4 flex flex-col border border-gray-400 min-w-40">
                 <img src={Logo} alt="Group" className="max-w-20" />
 
-                <div href="#" className="flex items-center py-2 border-b ">
+                <Link
+                    to="/dashboard"
+                    className="flex items-center py-2 border-b ">
                     <img src={Squares} alt="Group" className="max-w-20 mr-2" />
                     <span>Dashboard</span>
-                </div>
-                <div href="#" className="flex items-center py-2 border-b ">
+                </Link>
+                <Link
+                    to="/projects"
+                    className="flex items-center py-2 border-b ">
                     <img src={Folder} alt="Group" className="max-w-20 mr-2" />
                     <span>Projects</span>
-                </div>
-                <div href="#" className="flex items-center py-2 border-b ">
+                </Link>
+                <Link to="/teams" className="flex items-center py-2 border-b ">
                     <img src={Groups} alt="Group" className="max-w-20 mr-2" />
                     <span>Teams</span>
-                </div>
-                <div href="#" className="flex items-center py-2 border-b ">
+                </Link>
+                <Link
+                    to="/analytics"
+                    className="flex items-center py-2 border-b ">
                     <img
                         src={Pie_chart}
                         alt="Group"
                         className="max-w-20 mr-2"
                     />
                     <span>Analytics</span>
-                </div>
-                <div href="#" className="flex items-center py-2 border-b ">
+                </Link>
+                <Link
+                    to="/messages"
+                    className="flex items-center py-2 border-b ">
                     <img src={Chat} alt="Group" className="max-w-20 mr-2" />
                     <span>Messages</span>
-                </div>
-                <div href="#" className="flex items-center py-2 border-b ">
+                </Link>
+                <Link
+                    to="/integrations"
+                    className="flex items-center py-2 border-b ">
                     <img src={Code} alt="Group" className="max-w-20 mr-2" />
                     <span>Integrations</span>
-                </div>
+                </Link>
 
                 {/* Ảnh bắt đầu từ hàng 3 */}
                 <div className="mt-auto border-t  pt-4">
