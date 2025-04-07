@@ -1,11 +1,32 @@
 {
-  "Turnover": [
-    { "id": 1, "title": "Turnover", "data": 92.405 }
-  ],
-  "Profit": [
-    { "id": 2, "title": "Profit", "data": 32.218 }
-  ],
-  "New_customer": [
-    { "id": 3, "title": "New customer", "data": 298 }
-  ]
+    "Turnover": [
+        {
+            "id": 1,
+            "title": "Turnover",
+            "amount": 92.405,
+            "changePercentage": 5.39,
+            "changeDirection": "up",
+            "period": "this month"
+        }
+    ],
+    "Profit": [
+        {
+            "id": 2,
+            "title": "Profit",
+            "amount": 32.218,
+            "changePercentage": 3.25,
+            "changeDirection": "up",
+            "period": "this month"
+        }
+    ],
+    "New_customer": [
+        {
+            "id": 3,
+            "title": "New customer",
+            "count": 298,
+            "changePercentage": 7.15,
+            "changeDirection": "up",
+            "period": "this month"
+        }
+    ]
 }

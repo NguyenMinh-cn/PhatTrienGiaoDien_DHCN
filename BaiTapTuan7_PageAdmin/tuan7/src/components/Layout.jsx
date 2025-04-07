@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import GroupImage from '../assets/img/Group.png';
 import Bell1 from '../assets/img/Bell 1.png';
@@ -24,27 +24,30 @@ function Layout() {
     const [data, setData] = useState({
         turnover: null,
         profit: null,
-        newCustomer: null
+        newCustomer: null,
     });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
-
         const fetchData = async () => {
             try {
-                const [turnoverRes, profitRes, newCustomerRes] = await Promise.all([
-                    axios.get('http://localhost:5000/Turnover'),
-                    axios.get('http://localhost:5000/Profit'),
-                    axios.get('http://localhost:5000/New_customer')
-                ]);
-
+                const [turnoverRes, profitRes, newCustomerRes] =
+                    await Promise.all([
+                        axios.get('http://localhost:5000/Turnover'),
+                        axios.get('http://localhost:5000/Profit'),
+                        axios.get('http://localhost:5000/New_customer'),
+                    ]);
+                console.log('Turnover data:', turnoverRes.data);
+                console.log('Profit data:', profitRes.data);
+                console.log('New customer data:', newCustomerRes.data);
                 setData({
-                    turnover: turnoverRes.data[0] || null,  
-                    profit: profitRes.data[0] || null,     
-                    newCustomer: newCustomerRes.data[0] || null  
+                    turnover: turnoverRes.data[0] || null,
+                    profit: profitRes.data[0] || null,
+                    newCustomer: newCustomerRes.data[0] || null,
                 });
                 setLoading(false);
             } catch (err) {
+                console.error('Lỗi xảy ra khi gọi API:', err);
                 setError(err.message);
                 setLoading(false);
             }
@@ -127,30 +130,59 @@ function Layout() {
                         <span>Overview</span>
                     </div>
                     <div className=" col-span-1 row-span-2 bg-slate-400">
-                    {data.turnover ? (
+                        {data.turnover ? (
                             <>
                                 <h3>{data.turnover.title}</h3>
-                                <p>{data.turnover.data}</p>
+                                <p>
+                                    {new Intl.NumberFormat().format(
+                                        data.turnover.amount
+                                    )}{' '}
+                                    USD
+                                </p>
+
+                                <p>
+                                    {data.turnover.changeDirection === 'up'
+                                        ? 'up'
+                                        : 'down'}{' '}
+                                    {data.turnover.changePercentage}%
+                                </p>
                             </>
                         ) : (
                             <div>No data available</div>
                         )}
                     </div>
                     <div className=" col-span-1 row-span-2 bg-slate-400">
-                    {data.profit ? (
+                        {data.profit ? (
                             <>
                                 <h3>{data.profit.title}</h3>
-                                <p>{data.profit.data}</p>
+                                <p>
+                                    {new Intl.NumberFormat().format(
+                                        data.profit.amount
+                                    )}{' '}
+                                    USD
+                                </p>
+                                <p>
+                                    {data.profit.changeDirection === 'up'
+                                        ? 'up'
+                                        : 'down'}{' '}
+                                    {data.profit.changePercentage}%{' '}
+                                </p>
                             </>
                         ) : (
                             <div>No data available</div>
                         )}
                     </div>
                     <div className=" col-span-1 row-span-2 bg-slate-400">
-                    {data.newCustomer ? (
+                        {data.newCustomer ? (
                             <>
                                 <h3>{data.newCustomer.title}</h3>
-                                <p>{data.newCustomer.data}</p>
+                                <p>{data.newCustomer.count} customers</p>
+                                <p>
+                                    {data.newCustomer.changeDirection === 'up'
+                                        ? 'up'
+                                        : 'down'}{' '}
+                                    {data.newCustomer.changePercentage}%
+                                </p>
                             </>
                         ) : (
                             <div>No data available</div>
