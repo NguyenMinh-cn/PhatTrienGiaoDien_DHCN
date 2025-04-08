@@ -2,13 +2,23 @@ import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import CustomPagination from './CustomPagination';
 import Status from './Status';
-import Create from '../assets/img/create.png';
+
 import axios from 'axios';
-function DataTableCustom() {
+import DialogOrder from './DialogOrder';
+function DataTableCustom({ triggerReload }) {
     const columns = [
         {
             name: 'CUSTOMER NAME',
-            selector: (row) => row.customerName,
+            selector: (row) => (
+                <div className="flex justify-center items-center space-x-1">
+                    <img
+                        src={row.avatar}
+                        alt=""
+                        style={{ width: 32, height: 32, borderRadius: '50%' }}
+                    />
+                    <span>{row.customerName}</span>
+                </div>
+            ),
         },
         {
             name: 'COMPANY',
@@ -28,10 +38,12 @@ function DataTableCustom() {
         },
         {
             name: '',
-            cell: () => (
-                <button>
-                    <img src={Create} alt="" className="h-4 w-4" />
-                </button>
+            cell: (row) => (
+                <DialogOrder
+                    row={row}
+                    onUpdateStatus={handleStatusUpdate}
+                    triggerReload={triggerReload}
+                />
             ),
             width: '50px',
         },
@@ -64,6 +76,12 @@ function DataTableCustom() {
         page * rowsPerPage, //phần tử bắt đầu, vd 1*6 là phần tử thứ 6
         (page + 1) * rowsPerPage //phần tử kết thúc, vd (1+1)*6 là phần tử thứ 12 không bao gồm phần tử thứ 12
     ); // phân trang
+    const handleStatusUpdate = (id, newStatus) => {
+        const updatedOrders = order.map((order) =>
+            order.id === id ? { ...order, status: newStatus } : order
+        );
+        setOrder(updatedOrders);
+    };
 
     return (
         <DataTable

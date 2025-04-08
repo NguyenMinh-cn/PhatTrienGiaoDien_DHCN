@@ -3,9 +3,7 @@ import axios from 'axios';
 
 import GroupImage from '../assets/img/Group.png';
 import Bell1 from '../assets/img/Bell 1.png';
-import Button1509 from '../assets/img/Button 1509.png';
-import Button1529 from '../assets/img/Button 1529.png';
-import Button1530 from '../assets/img/Button 1530.png';
+
 import Code from '../assets/img/Code.png';
 import Squares from '../assets/img/Squares four 1.png';
 import Chat from '../assets/img/Chat.png';

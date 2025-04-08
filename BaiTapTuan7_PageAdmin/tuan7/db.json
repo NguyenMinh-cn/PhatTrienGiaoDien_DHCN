@@ -1,125 +1,182 @@
 {
-    "Turnover": [
-        {
-            "id": 1,
-            "title": "Turnover",
-            "amount": 92.405,
-            "changePercentage": 5.39,
-            "changeDirection": "up",
-            "period": "this month"
-        }
-    ],
-    "Profit": [
-        {
-            "id": 2,
-            "title": "Profit",
-            "amount": 32.218,
-            "changePercentage": 3.25,
-            "changeDirection": "up",
-            "period": "this month"
-        }
-    ],
-    "New_customer": [
-        {
-            "id": 3,
-            "title": "New customer",
-            "count": 298,
-            "changePercentage": 7.15,
-            "changeDirection": "up",
-            "period": "this month"
-        }
-    ],
+    "Turnover": {
+        "title": "Turnover",
+        "amount": "260.00",
+        "changePercentage": 0,
+        "changeDirection": "down",
+        "period": "this month"
+    },
+    "Profit": {
+        "title": "Profit",
+        "amount": "104.00",
+        "changePercentage": 0,
+        "changeDirection": "down",
+        "period": "this month"
+    },
+    "New_customer": {
+        "title": "New customer",
+        "count": 10,
+        "changePercentage": 0,
+        "changeDirection": "up",
+        "period": "this month"
+    },
     "Orders": [
         {
+            "id": "1",
             "customerName": "Elizabeth Lee",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_k9diwz.png",
             "company": "AvatarSystems",
-            "orderValue": "$359",
-            "orderDate": "10/07/2023",
-            "status": "New"
+            "orderValue": 359,
+            "orderDate": "10/03/2025",
+            "status": "Completed"
         },
         {
+            "id": "2",
             "customerName": "Carlos Garcia",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_1_fvu3ry.png",
             "company": "SmoozeShift",
-            "orderValue": "$747",
-            "orderDate": "24/07/2023",
-            "status": "New"
+            "orderValue": 123,
+            "orderDate": "24/03/2025",
+            "status": "In-progress"
         },
         {
+            "id": "3",
             "customerName": "Elizabeth Bailey",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_2_zcqvfc.png",
             "company": "Prime Time Telecom",
-            "orderValue": "$564",
-            "orderDate": "08/08/2023",
+            "orderValue": 234,
+            "orderDate": "08/08/2025",
             "status": "In-progress"
         },
         {
+            "id": "4",
             "customerName": "Ryan Brown",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_313_lkt8jh.png",
             "company": "OmniTech Corporation",
-            "orderValue": "$541",
-            "orderDate": "31/08/2023",
+            "orderValue": 564,
+            "orderDate": "31/08/2025",
             "status": "In-progress"
         },
         {
+            "id": "5",
             "customerName": "Ryan Young",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_4_z93zpt.png",
             "company": "DataStream Inc.",
-            "orderValue": "$769",
-            "orderDate": "01/05/2023",
+            "orderValue": 745,
+            "orderDate": "01/05/2025",
             "status": "Completed"
         },
         {
+            "id": "6",
             "customerName": "Hailey Adams",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_2_zcqvfc.png",
             "company": "FlowRush",
-            "orderValue": "$922",
-            "orderDate": "10/06/2023",
+            "orderValue": 922,
+            "orderDate": "10/06/2025",
             "status": "Completed"
         },
         {
+            "id": "7",
             "customerName": "Elizabeth Lee",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_k9diwz.png",
             "company": "AvatarSystems",
-            "orderValue": "$359",
-            "orderDate": "10/07/2023",
+            "orderValue": 359,
+            "orderDate": "10/03/2025",
             "status": "New"
         },
         {
+            "id": "8",
             "customerName": "Carlos Garcia",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_1_fvu3ry.png",
             "company": "SmoozeShift",
-            "orderValue": "$747",
-            "orderDate": "24/07/2023",
-            "status": "New"
+            "orderValue": 747,
+            "orderDate": "24/03/2025",
+            "status": "Completed"
         },
         {
+            "id": "9",
             "customerName": "Elizabeth Bailey",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_2_zcqvfc.png",
             "company": "Prime Time Telecom",
-            "orderValue": "$564",
-            "orderDate": "08/08/2023",
+            "orderValue": 564,
+            "orderDate": "08/08/2025",
             "status": "In-progress"
         },
         {
+            "id": "10",
             "customerName": "Ryan Brown",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_313_lkt8jh.png",
             "company": "OmniTech Corporation",
-            "orderValue": "$541",
-            "orderDate": "31/08/2023",
+            "orderValue": 541,
+            "orderDate": "31/08/2025",
             "status": "In-progress"
         },
         {
+            "id": "11",
             "customerName": "Ryan Young",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_4_z93zpt.png",
             "company": "DataStream Inc.",
-            "orderValue": "$769",
-            "orderDate": "01/05/2023",
+            "orderValue": 769,
+            "orderDate": "01/05/2025",
             "status": "Completed"
         },
         {
+            "id": "12",
             "customerName": "Hailey Adams",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_2_zcqvfc.png",
             "company": "FlowRush",
-            "orderValue": "$922",
-            "orderDate": "10/06/2023",
+            "orderValue": 425,
+            "orderDate": "10/06/2025",
             "status": "Completed"
         },
         {
+            "id": "13",
             "customerName": "Adams",
+            "avatar": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_3_x3kyrh.png",
             "company": "Rush",
-            "orderValue": "$922",
-            "orderDate": "10/06/2023",
-            "status": "In-progress"
+            "orderValue": 922,
+            "orderDate": "10/06/2025",
+            "status": "New"
+        },
+        {
+            "id": "16cb",
+            "customerName": "esgdss",
+            "company": "hfgdc",
+            "orderValue": 20,
+            "orderDate": "09/03/2025",
+            "status": "Completed"
+        },
+        {
+            "id": "5a51",
+            "customerName": "esgds",
+            "company": "adge",
+            "orderValue": 70,
+            "orderDate": "09/03/2025",
+            "status": "Completed"
+        },
+        {
+            "id": "a7b2",
+            "customerName": "esgdss",
+            "company": "",
+            "orderValue": 70,
+            "orderDate": "15/04/2025",
+            "status": "Completed"
+        },
+        {
+            "id": "39b0",
+            "customerName": "zdv",
+            "company": "zdv",
+            "orderValue": 110,
+            "orderDate": "09/04/2025",
+            "status": "Completed"
+        },
+        {
+            "id": "523d",
+            "customerName": "zdv",
+            "company": "zdv",
+            "orderValue": 80,
+            "orderDate": "09/04/2025",
+            "status": "Completed"
         }
     ]
 }
