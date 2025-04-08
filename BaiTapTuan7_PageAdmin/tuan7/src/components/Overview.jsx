@@ -113,6 +113,7 @@ function Overview() {
             console.error('Lỗi khi cập nhật số khách hàng mới:', err);
         }
     };
+
     const updateTurnoverAndProfit = async (orders, month, year, profitRate) => {
         try {
             // Bước 1: Tính toán mới từ đơn hàng
@@ -130,12 +131,22 @@ function Overview() {
                 axios.get('http://localhost:5000/Turnover'),
                 axios.get('http://localhost:5000/Profit'),
             ]);
+<<<<<<< HEAD
+
             const oldTurnover = {
                 amount: parseFloat(oldTurnoverRes.data?.amount) || 0,
                 changePercentage:
                     parseFloat(oldTurnoverRes.data?.changePercentage) || 0,
             };
 
+=======
+            const oldTurnover = {
+                amount: parseFloat(oldTurnoverRes.data?.amount) || 0,
+                changePercentage:
+                    parseFloat(oldTurnoverRes.data?.changePercentage) || 0,
+            };
+
+>>>>>>> ece18dd (css va tao Minh chung)
             const oldProfit = {
                 amount: parseFloat(oldProfitRes.data?.amount) || 0,
                 changePercentage:

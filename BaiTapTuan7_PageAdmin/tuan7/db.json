@@ -3,20 +3,26 @@
         "title": "Turnover",
         "amount": "260.00",
         "changePercentage": 0,
+
         "changeDirection": "down",
+
         "period": "this month"
     },
     "Profit": {
         "title": "Profit",
         "amount": "104.00",
         "changePercentage": 0,
+
         "changeDirection": "down",
+
         "period": "this month"
     },
     "New_customer": {
         "title": "New customer",
+
         "count": 10,
         "changePercentage": 0,
+
         "changeDirection": "up",
         "period": "this month"
     },
@@ -177,6 +183,14 @@
             "orderValue": 80,
             "orderDate": "09/04/2025",
             "status": "Completed"
+        },
+        {
+            "id": "e5c3",
+            "customerName": "Minh",
+            "company": "abc",
+            "orderValue": 70,
+            "orderDate": "11/04/2025",
+            "status": "New"
         }
     ]
 }
