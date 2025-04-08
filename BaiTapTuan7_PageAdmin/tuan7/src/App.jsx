@@ -17,7 +17,7 @@ function App() {
                 <Menu className="col-span-1" />
                 <div className="col-span-4 ">
                     <Routes>
-                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="/" element={<Dashboard />} />
                         <Route path="/projects" element={<Projects />} />
                         <Route path="/teams" element={<Teams />} />
                         <Route path="/analytics" element={<Analytics />} />

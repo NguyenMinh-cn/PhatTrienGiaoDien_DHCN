@@ -28,7 +28,7 @@ function Menu() {
             <img src={Logo} alt="Group" className="max-w-20 my-5" />
 
             <NavLink
-                to="/dashboard"
+                to="/"
                 className={({ isActive }) =>
                     isActive
                         ? 'flex items-center py-2 border-b text-pink-600 font-bold bg-pink-200'
@@ -67,6 +67,7 @@ function Menu() {
                 <img src={Pie_chart} alt="Group" className="max-w-20 mr-2" />
                 <span>Analytics</span>
             </NavLink>
+
             <NavLink
                 to="/messages"
                 className={({ isActive }) =>
