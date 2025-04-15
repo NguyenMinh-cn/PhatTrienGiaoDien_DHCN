@@ -1,6 +1,6 @@
 // components/Header.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -35,31 +35,51 @@ export default function Header() {
             </div>
 
             <nav className="flex items-center gap-4 text-[12px]">
-                <Link
+                <NavLink
                     to="/what-to-cook"
-                    className="text-gray-500 hover:text-pink-600">
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'text-pink-600 font-semibold'
+                            : 'text-gray-500 hover:text-pink-600'
+                    }>
                     What to cook
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to="/recipes"
-                    className="text-gray-500 hover:text-pink-600">
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'text-pink-600 font-semibold'
+                            : 'text-gray-500 hover:text-pink-600'
+                    }>
                     Recipes
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to="/ingredients"
-                    className="text-gray-500 hover:text-pink-600">
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'text-pink-600 font-semibold'
+                            : 'text-gray-500 hover:text-pink-600'
+                    }>
                     Ingredients
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to="/occasions"
-                    className="text-gray-500 hover:text-pink-600">
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'text-pink-600 font-semibold'
+                            : 'text-gray-500 hover:text-pink-600'
+                    }>
                     Occasions
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to="/about-us"
-                    className="text-gray-500 hover:text-pink-600">
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'text-pink-600 font-semibold'
+                            : 'text-gray-500 hover:text-pink-600'
+                    }>
                     About Us
-                </Link>
+                </NavLink>
                 <button className="bg-pink-200 text-pink-600 font-normal">
                     Login
                 </button>
