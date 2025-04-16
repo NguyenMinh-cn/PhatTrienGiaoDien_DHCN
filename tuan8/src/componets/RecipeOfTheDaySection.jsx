@@ -1,30 +1,16 @@
-import React from 'react';
-import { Bookmark } from 'lucide-react';
-import RecipeCard from './RecipeCard ';
+import React, { useEffect, useState } from 'react';
+import RecipeCard from './RecipeCard';
 
 export default function RecipeOfTheDaySection() {
-    const recipes = [
-        {
-            title: 'Italian-style tomato salad',
-            time: '14 minutes',
-            image: 'https://res.cloudinary.com/dqlzcgear/image/upload/v1744726763/Italian-style_tomato_lfmxer.png',
-        },
-        {
-            title: 'Spaghetti with vegetables and shrimp',
-            time: '15 minutes',
-            image: 'https://res.cloudinary.com/dqlzcgear/image/upload/v1741178828/Vegetable_and_shrimp_spaghetti_lp2ikz.png',
-        },
-        {
-            title: 'Lotus delight salad',
-            time: '20 minutes',
-            image: 'https://res.cloudinary.com/dqlzcgear/image/upload/v1741178823/salad_with_cabbage_and_shrimp_xgldbm.png',
-        },
-        {
-            title: 'Snack cakes',
-            time: '21 minutes',
-            image: 'https://res.cloudinary.com/dqlzcgear/image/upload/v1744726843/Snack_cakes_faudnk.png',
-        },
-    ];
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        // Lấy dữ liệu từ JSON server
+        fetch('http://localhost:5000/recipes')
+            .then((response) => response.json())
+            .then((data) => setRecipes(data))
+            .catch((error) => console.error('Error fetching data:', error));
+    }, []);
 
     return (
         <section className="py-12 px-4 md:px-8">
@@ -38,8 +24,8 @@ export default function RecipeOfTheDaySection() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                {recipes.map((recipe, index) => (
-                    <RecipeCard key={index} recipe={recipe} />
+                {recipes.map((recipe) => (
+                    <RecipeCard key={recipe.id} recipe={recipe} />
                 ))}
             </div>
         </section>

@@ -1,30 +1,16 @@
-import React from 'react';
-import RecipeCard from './RecipeCard ';
-
-const recipes = [
-    {
-        title: 'Italian-style tomato salad',
-        time: '14 minutes',
-        image: 'https://res.cloudinary.com/dqlzcgear/image/upload/v1744726763/Italian-style_tomato_lfmxer.png',
-    },
-    {
-        title: 'Spaghetti with vegetables and shrimp',
-        time: '15 minutes',
-        image: 'https://res.cloudinary.com/dqlzcgear/image/upload/v1741178828/Vegetable_and_shrimp_spaghetti_lp2ikz.png',
-    },
-    {
-        title: 'Lotus delight salad',
-        time: '20 minutes',
-        image: 'https://res.cloudinary.com/dqlzcgear/image/upload/v1741178823/salad_with_cabbage_and_shrimp_xgldbm.png',
-    },
-    {
-        title: 'Snack cakes',
-        time: '21 minutes',
-        image: 'https://res.cloudinary.com/dqlzcgear/image/upload/v1744726843/Snack_cakes_faudnk.png',
-    },
-];
+import React, { useState, useEffect } from 'react';
+import RecipeCard from './RecipeCard';
 
 export default function RecipeVideoLayout() {
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/recipesWithVideos')
+            .then((res) => res.json())
+            .then((data) => setRecipes(data))
+            .catch((err) => console.error('Failed to fetch recipes:', err));
+    }, []);
+
     return (
         <div className="p-8">
             <h1 className="text-4xl font-bold text-pink-600 mb-4">

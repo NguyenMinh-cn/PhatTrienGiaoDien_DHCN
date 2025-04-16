@@ -22,7 +22,7 @@ const RecipeCard = ({ recipe }) => {
                 </div>
 
                 {/* Time label */}
-                <div className="mt-auto ">
+                <div className="mr-auto ">
                     <p className="inline-block bg-pink-100 text-pink-600 text-xs font-semibold px-2 py-1 rounded">
                         {recipe.time}
                     </p>

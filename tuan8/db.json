@@ -1,0 +1,85 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "title": "Italian-style tomato salad",
+            "time": "14 minutes",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744726763/Italian-style_tomato_lfmxer.png"
+        },
+        {
+            "id": 2,
+            "title": "Spaghetti with vegetables and shrimp",
+            "time": "15 minutes",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1741178828/Vegetable_and_shrimp_spaghetti_lp2ikz.png"
+        },
+        {
+            "id": 3,
+            "title": "Lotus delight salad",
+            "time": "20 minutes",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1741178823/salad_with_cabbage_and_shrimp_xgldbm.png"
+        },
+        {
+            "id": 4,
+            "title": "Snack cakes",
+            "time": "21 minutes",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744726843/Snack_cakes_faudnk.png"
+        }
+    ],
+    "editorsPick": [
+        {
+            "title": "Stuffed sticky rice ball",
+            "time": "34 minutes",
+            "author": "Jennifer King",
+            "imgathor": "https://res.cloudinary.com/dqlzcgear/image/upload/v1741354533/avatar_mcfo0h.png",
+            "description": "Stuffed sticky rice balls: A delightful Asian treat with chewy, glutinous rice and a flavorful surprise filling...",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744728533/33865701-4155-404a-9c0c-633a065c8ca7.png"
+        },
+        {
+            "title": "Strawberry smoothie",
+            "time": "40 minutes",
+            "author": "Matthew Martinez",
+            "imgathor": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_1_fvu3ry.png",
+            "description": "Savor the refreshing delight of a strawberry smoothie. Made with ripe strawberries, this creamy blend offers...",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744728567/932d2e01-167f-494a-9184-2902b8eeb3a1.png"
+        },
+        {
+            "title": "Latte Art",
+            "time": "19 minutes",
+            "author": "Sarah Hill",
+            "imgathor": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_313_lkt8jh.png",
+            "description": "Latte art is the skillful craft of creating captivating designs on the surface of a latte...",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744728575/300ac734-c5c0-4298-b897-aded94645970.png"
+        },
+        {
+            "title": "Butter fried noodles",
+            "time": "16 minutes",
+            "author": "Julia Lopez",
+            "imgathor": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744178028/Avatar_2_zcqvfc.png",
+            "description": "Butter fried noodles: Savory noodles cooked in butter for a delicious and satisfying meal...",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744728584/e45f6cfe-760f-4d9b-bbfb-7795fc1746bf.png"
+        }
+    ],
+
+    "recipesWithVideos": [
+        {
+            "title": "Salad with cabbage and shrimp",
+            "time": "32 minutes",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1741178823/Salad_with_cabbage_jzzdtr.png"
+        },
+        {
+            "title": "Salad of cove beans, shrimp and potatoes",
+            "time": "20 minutes",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1741178817/Bean_shrimp_and_potato_salad_a7uq6m.png"
+        },
+        {
+            "title": "Sunny-side up fried egg",
+            "time": "15 minutes",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1744777953/Sunny-side_up_fried_eggs_mz3vco.png"
+        },
+        {
+            "title": "Lotus delight salad",
+            "time": "20 minutes",
+            "image": "https://res.cloudinary.com/dqlzcgear/image/upload/v1741178822/Lotus_delight_salad_01_dspw2z.png"
+        }
+    ]
+}
