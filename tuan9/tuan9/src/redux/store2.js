@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './counterSlice2';  // Thay đổi đường dẫn đến counterSlice2
+import counterReducer from './counterSlice2';  
+import todoSlice from './todoSlice';
 
 // Tạo Redux store
 const store2 = configureStore({
   reducer: {
-    counter: counterReducer
+    todos: todoSlice         
   }
 });
 

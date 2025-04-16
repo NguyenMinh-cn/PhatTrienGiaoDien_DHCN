@@ -11,14 +11,12 @@ const counterSlice2 = createSlice({
     decrement: (state) => {
       state.count -= 1;
     },
-    reset: (state) => {
-      state.count = 0;
-    }
+    
   }
 });
 
 // Xuất các action creators
-export const { increment, decrement, reset } = counterSlice2.actions;
+export const { increment, decrement } = counterSlice2.actions;
 
 // Xuất reducer để sử dụng trong store
 export default counterSlice2.reducer;
