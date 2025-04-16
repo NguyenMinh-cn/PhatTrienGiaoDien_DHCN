@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ onLoginClick }) {
     return (
         <header className="flex items-center justify-between px-6 py-4 bg-white shadow">
             <Link to="/">
@@ -80,7 +80,9 @@ export default function Header() {
                     }>
                     About Us
                 </NavLink>
-                <button className="bg-pink-200 text-pink-600 font-normal">
+                <button
+                    onClick={onLoginClick}
+                    className="bg-pink-200 text-pink-600 font-normal">
                     Login
                 </button>
                 <button className="bg-pink-500 text-white font-normal">

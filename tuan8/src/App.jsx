@@ -10,30 +10,39 @@ import OccasionsPage from './page/OccasionsPage';
 import AboutUsPage from './page/AboutUsPage';
 import Footer from './componets/Footer';
 import Header from './componets/Header';
+import LoginModal from './componets/LoginModal';
 
 function App() {
-    const [count, setCount] = useState(0);
-
+    const [showLogin, setShowLogin] = useState(false);
     return (
         <>
             <Router>
                 <div className="flex flex-col justify-between">
-                    <Header />
-                    <Routes>
-                        <Route path="/" element={<HomePageLayout />} />
-                        <Route
-                            path="/what-to-cook"
-                            element={<WhatToCookPage />}
-                        />
-                        <Route path="/recipes" element={<RecipesPage />} />
-                        <Route
-                            path="/ingredients"
-                            element={<IngredientsPage />}
-                        />
-                        <Route path="/occasions" element={<OccasionsPage />} />
-                        <Route path="/about-us" element={<AboutUsPage />} />
-                    </Routes>
+                    <Header onLoginClick={() => setShowLogin(true)} />
+                    <main className="flex-grow">
+                        <Routes>
+                            <Route path="/" element={<HomePageLayout />} />
+                            <Route
+                                path="/what-to-cook"
+                                element={<WhatToCookPage />}
+                            />
+                            <Route path="/recipes" element={<RecipesPage />} />
+                            <Route
+                                path="/ingredients"
+                                element={<IngredientsPage />}
+                            />
+                            <Route
+                                path="/occasions"
+                                element={<OccasionsPage />}
+                            />
+                            <Route path="/about-us" element={<AboutUsPage />} />
+                        </Routes>
+                    </main>
                     <Footer />
+                    <LoginModal
+                        open={showLogin}
+                        onClose={() => setShowLogin(false)}
+                    />
                 </div>
             </Router>
         </>
