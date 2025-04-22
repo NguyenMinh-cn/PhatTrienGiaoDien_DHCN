@@ -5,11 +5,13 @@ import { Provider } from 'react-redux';
 import Todo_List from './Todo_List';
 import storeToDoList from './redux/storeToDoList';
 import ToggleTheme from './ToggleTheme';
+import ShoppingCart from './ShoppingCart';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <Provider store={storeToDoList}>
+        {/* <Provider store={storeToDoList}>
             <ToggleTheme />
-        </Provider>
+        </Provider> */}
+        <ShoppingCart />
     </StrictMode>
 );
