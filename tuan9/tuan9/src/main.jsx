@@ -5,11 +5,13 @@ import { Provider } from 'react-redux';
 import UsersList from './features/users/UsersList';
 import store from './redux/store';
 import BT_redux from './BT_redux';
+import BmiCalculator from './BmiCalculator';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <Provider store={store}>
+        {/* <Provider store={store}>
             <BT_redux />
-        </Provider>
+        </Provider> */}
+        <BmiCalculator />
     </StrictMode>
 );

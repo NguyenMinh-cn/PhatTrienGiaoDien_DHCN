@@ -17,16 +17,15 @@ const usersSlice = createSlice({
     initialState: {
         users: [], // Mảng chứa danh sách người dùng
         status: 'idle', // Trạng thái của API call (idle, loading, succeeded, failed)
-        error: null, // Lỗi nếu có
+        error: null,
     },
     reducers: {},
     extraReducers: (builder) => {
         builder
-            // Khi bắt đầu gọi API (loading state)
             .addCase(fetchUsers.pending, (state) => {
                 state.status = 'loading';
             })
-            // Khi API call thành công
+
             .addCase(fetchUsers.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.users = action.payload; // Gán danh sách người dùng vào state
@@ -39,5 +38,4 @@ const usersSlice = createSlice({
     },
 });
 
-// Export reducers từ slice
 export default usersSlice.reducer;
