@@ -3,12 +3,13 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import { Provider } from 'react-redux';
 import UsersList from './features/users/UsersList';
-import { store } from './app/store';
+import store from './redux/store';
+import BT_redux from './BT_redux';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
         <Provider store={store}>
-            <UsersList />
+            <BT_redux />
         </Provider>
     </StrictMode>
 );

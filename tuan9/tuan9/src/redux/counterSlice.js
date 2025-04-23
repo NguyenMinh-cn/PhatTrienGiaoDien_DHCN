@@ -1,21 +1,16 @@
-// redux/counterSlice.js
-const INCREMENT = 'INCREMENT';
-const DECREMENT = 'DECREMENT';
+import { createSlice } from '@reduxjs/toolkit';
 
-// Reducer
-const initialState = { count: 0 };
+const counterSlice = createSlice({
+    name: 'counter',
+    initialState: 0,
+    reducers: {
+        increment: (state) => state + 1,
+        decrement: (state) => state - 1,
+        reset: () => 0, // Reset về 0
+        incrementByAmount: (state, action) => state + action.payload, // Tăng theo số người dùng nhập
+    },
+});
 
-export const counterReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case INCREMENT:
-      return { count: state.count + 1 };
-    case DECREMENT:
-      return { count: state.count - 1 };
-    default:
-      return state;
-  }
-};
-
-// Action creators
-export const increment = () => ({ type: INCREMENT });
-export const decrement = () => ({ type: DECREMENT });
+export const { increment, decrement, reset, incrementByAmount } =
+    counterSlice.actions;
+export default counterSlice.reducer;
